@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    text-decoration: none;
+    
+}
+
+:root {
+    --orange: #fb9300;
+    --dark: #022e57;
+    --cyan: #4ff1c1;
+    --gray: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    height: 100%;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: .5s;
+    
+}
+
+nav.active {
+    background: #fff;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+nav.active .logo, 
+nav.active .nav-menu li a {
+    color: var(--dark);
+}
+
+nav .nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-menu li {
+    margin-left: 2rem;
+    list-style: none;
+}
+
+nav .nav-menu li a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    transition: color .5s;
+}
+
+nav .nav-menu li a .icon {
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+nav .nav-menu li a:hover {
+    color: var(--orange);
+}
+
+/* home */
+#home {
+    width: 100%;
+    background-color: var(--cyan);
+    padding: 10rem 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+#home .title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+}
+
+#home .text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+#home .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    background-color: var(--dark);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+}
+
+#home .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#home .content .image {
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Program */
+#program {
+    width: 100%;
+    background-color: #fff;
+    padding: 5rem 0 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+#program .title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--dark);
+    text-align: center;
+}
+
+#program .text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--dark);
+    text-align: center;
+    margin: 0.8rem;
+}
+
+#program .benefit {
+    font-size:  1.2rem;
+    font-weight: bold;
+    color: var(--dark);
+    margin: 1rem 0;
+}
+
+#program .row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#program .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: var(--gray);
+    width: 100%;
+}
+
+#program .card .content .title{
+   font-size: 2rem;
+}
+
+#program .content .features {
+    padding-left: 1.2rem;
+}
+
+#program .content .features li {
+    margin: .5rem 0;
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#program .content .features li .list-item {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+#program .btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    background-color: var(--orange);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Output */
+#output {
+    width: 100%;
+    background-color: #fff;
+    padding: 5rem 0 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+#output .title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--dark);
+    text-align: center;
+}
+
+#output .text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--dark);
+    text-align: center;
+    margin: 0.8rem;
+}
+
+#output .row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#output .card {
+    padding: 2rem;
+    margin: 2rem;
+    width: 100%;
+}
+
+#output .card .content .title{
+    font-size: 4rem;
+}
+
+#output .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* About */
+#about {
+    width: 100%;
+    background-color: var(--gray);
+    padding: 4rem  0;
+    min-height: 100vh;
+    position: relative;
+}
+
+#about .title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dark);
+    text-align: center;
+}
+
+#about .text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--dark);
+    text-align: center;
+    margin: 0.8rem;
+}
+
+#about .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#about .card .detail {
+    font-size: 1rem;
+    padding: 2rem;
+}
+
+#about .card .image-profile {
+    display: inline-block;
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#about .card .image-profile img {
+    width: 100%;
+    height: 100%;
+}
+
+#about .card .social-media {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+#about .card .social-media .list-item{
+    margin-right: 0.9rem;
+    font-weight: 400;
+}
+
+#about .card .social-media .social-link img {
+    width: 2.3rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    #home .title {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    #home .text {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    #home .content {
+        margin: 2rem 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    #home .btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #program .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+     #program .title {
+        font-size: 2rem;
+    }
+
+    #program .text {
+        font-size: 0.9rem;
+    }
+
+    #about .card .detail {
+        font-size: 1rem;
+        padding: 2rem;
+    }
+
+    #about .card .image-profile {
+        display: inline-block;
+        position: relative;
+        width: 14rem;
+        height: 14rem;
+        overflow: hidden;
+        border-radius: 50%;
+    }  
+
+    #output .title {
+        font-size: 3rem;
+        font-weight: 600;
+        color: var(--dark);
+        text-align: center;
+    }
+
+
+    #output .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #output .card {
+        padding: 1rem;
+    }
+
+    #output .card .content .title{
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    #home .title {
+        font-size: 2rem;
+    }
+
+    #home .text {
+        font-size: 0.9rem;
+    }
+
+    #home .content .image {
+        width: 260px;
+        height: 100%;
+    }
+
+    #program .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+     #program .title {
+        font-size: 1.5rem;
+    }
+
+    #program .text {
+        font-size: 0.9rem;
+    }
+
+    #program .btn, 
+    #program .content .features li {
+        margin: .5rem 0;
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    #program .content .features li .list-item {
+        margin-right: 0.9rem;
+    }
+
+        #about .card .detail {
+        font-size: 0.8rem;
+        padding: 2rem;
+    }
+
+    #about .card .image-profile {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    #about .card .social-media {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+    }
+
+    #about .card .social-media .list-item{
+        margin-right: 0.9rem;
+        font-weight: 400;
+    }
+
+    #about .card .social-media .social-link img {
+        width: 1.5rem;
+    }
+
+    #output .title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--dark);
+        text-align: center;
+    }
+
+    #output .text {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: var(--dark);
+        text-align: center;
+        margin: 0.8rem;
+    }
+
+     #output .card {
+        padding: 0.5rem;
+    }
+
+    #output .card .content .title {
+        font-size: 1.7rem;
+    }
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #fff;
+    font-weight: bold;
+    text-align: center;
+    color: var(--dark);
+}
+
+footer .footer-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-list .list-item {
+    margin-right: 0.9rem;
+    font-weight: 400;
+}
